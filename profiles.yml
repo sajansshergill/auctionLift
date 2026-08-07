@@ -1,0 +1,8 @@
+# For local dev, dbt reads this from the project dir via DBT_PROFILES_DIR=.
+auctionlift:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: auctionlift.duckdb
+      threads: 4

@@ -1,0 +1,13 @@
+name: 'auctionlift'
+version: '1.0.0'
+config-version: 2
+profile: 'auctionlift'
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+models:
+  auctionlift:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

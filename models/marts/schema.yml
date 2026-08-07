@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: fct_auctions
+    description: One row per auction, enriched with experiment variant.
+    columns:
+      - name: auction_id
+        tests: [unique, not_null]
+      - name: variant
+        tests:
+          - not_null
+          - accepted_values: {values: [0, 1]}
+      - name: sale_price
+        tests: [not_null]
+  - name: stream_kpis
+    description: Per-stream KPI roll-up; the decision-metric table.
+    columns:
+      - name: stream_id
+        tests: [unique, not_null]
+      - name: gmv
+        tests: [not_null]

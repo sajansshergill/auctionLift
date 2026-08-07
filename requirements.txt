@@ -1,0 +1,12 @@
+# core
+duckdb>=1.1
+pandas>=2.2
+numpy>=1.26
+scipy>=1.13
+statsmodels>=0.14
+# warehouse / transforms
+dbt-duckdb>=1.9
+# dashboard
+streamlit>=1.40
+# tests
+pytest>=8.0

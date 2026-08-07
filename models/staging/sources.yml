@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: raw
+    schema: main
+    tables:
+      - name: raw_streams
+      - name: raw_auctions
+      - name: raw_bids
+      - name: raw_purchases
+      - name: raw_experiment_assignment
