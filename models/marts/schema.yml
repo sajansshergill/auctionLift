@@ -8,7 +8,9 @@ models:
       - name: variant
         tests:
           - not_null
-          - accepted_values: {values: [0, 1]}
+          - accepted_values:
+              arguments:
+                values: [0, 1]
       - name: sale_price
         tests: [not_null]
   - name: stream_kpis
