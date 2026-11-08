@@ -8,5 +8,6 @@ statsmodels>=0.14
 dbt-duckdb>=1.9
 # dashboard
 streamlit>=1.40
+plotly>=5.24
 # tests
 pytest>=8.0

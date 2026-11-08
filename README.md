@@ -6,6 +6,20 @@ Built to mirror the day job of a Product Data Scientist on a live-shopping marke
 
 **Headline finding:** soft close raises winning prices (+1.7% per auction, significant) but the longer auctions cut throughput by 6.3%, so **net GMV per stream falls 3.7%** — the intuitive "prices go up, ship it" read is a trap. The project detects that, decomposes it, and recommends against a global rollout.
 
+![AuctionLift demo](docs/demo.gif)
+
+---
+
+## The console
+
+`dashboard/app.py` is an interactive Streamlit + Plotly console for the experiment, styled as a dark glass/gradient dashboard:
+
+- **Live sidebar filters** — variant, sniping, seller size, pre-period GMV, sale price and minimum bids — and every KPI, chart and table on the page re-renders from the filtered slice.
+- **KPI cards with deltas** — GMV per stream, price per auction, items per stream and average duration, each carrying its soft-close vs hard-close delta, above the full KPI tree and the ship / no-ship verdict.
+- **Animated cohort views** — Plotly `animation_frame` charts that play GMV, cumulative GMV and mean winning price across 20 sequential auction batches; press ▶ Play and watch soft close pull ahead on price while falling behind on volume.
+- **A 3D auction space** — every auction as a point in price × duration × bids space (Scatter3d, drag to rotate), plus a price surface over duration × bids terrain.
+- **Mechanism & explorer views** — the price / throughput / net-GMV decomposition, winning-price distributions, price-vs-duration scatter, and the filtered stream-KPI and auction tables behind every chart.
+
 ---
 
 ## The problem
